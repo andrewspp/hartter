@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import WorkItem from './WorkItem';
 
-const WorkCategory = ({ title, works, index }) => {
+const WorkCategory = ({ 
+  title, 
+  works = [], 
+  index, 
+  activeIndex, 
+  startIndex, 
+  setItemRef 
+}) => {
+  // Créer des refs pour chaque WorkItem
+  const itemRefs = useRef(works.map(() => React.createRef()));
+  
+  const isCategoryVisible = works.some((_, i) => 
+    startIndex + i === activeIndex || 
+    startIndex + i === activeIndex - 1 || 
+    startIndex + i === activeIndex + 1
+  );
+  
   return (
-    <div className="work-category">
-      <h3 className="work-category-title">{title}</h3>
-      <div className="works-grid">
+    <div className="work-category" id={`category-${index}`}>
+      {isCategoryVisible && <h2 className="category-title">{title}</h2>}
+      <div className="works-container">
         {works.map((work, i) => (
-          <WorkItem
-            key={i}
-            title={work.title}
-            img={work.img}
-            alt={work.alt}
-            type={work.type}
-            year={work.year}
-            categoryIndex={index}
+          <WorkItem 
+            key={`${index}-${i}`} 
+            ref={itemRefs.current[i]}
+            work={work} 
+            index={startIndex + i}
+            isActive={activeIndex === startIndex + i}
+            setItemRef={setItemRef}
           />
         ))}
       </div>
