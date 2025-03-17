@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hartter/static/css/main.a9ed1fc0.css",
+    "main.js": "/hartter/static/js/main.352ac32c.js",
+    "static/js/453.232ed98b.chunk.js": "/hartter/static/js/453.232ed98b.chunk.js",
+    "index.html": "/hartter/index.html",
+    "main.a9ed1fc0.css.map": "/hartter/static/css/main.a9ed1fc0.css.map",
+    "main.352ac32c.js.map": "/hartter/static/js/main.352ac32c.js.map",
+    "453.232ed98b.chunk.js.map": "/hartter/static/js/453.232ed98b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9ed1fc0.css",
+    "static/js/main.352ac32c.js"
+  ]
+}
