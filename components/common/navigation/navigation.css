@@ -1,0 +1,22 @@
+.nav {
+  position: fixed;
+  top: calc(var(--unit) * 2);
+  right: calc(var(--unit) * 2);
+  z-index: 100;
+  font-size: calc(var(--unit) * 1.4);
+}
+
+.nav-item {
+  margin-bottom: calc(var(--unit));
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+  opacity: 1;
+}
+
+.nav-item.active {
+  transform: translateX(-5px);
+}

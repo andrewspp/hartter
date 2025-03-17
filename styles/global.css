@@ -1,0 +1,73 @@
+body {
+    font-family: 'SpaceMono', monospace;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.section {
+    padding: calc(var(--unit) * 5);
+    margin-bottom: calc(var(--unit) * 10);
+    position: relative;
+    border-bottom: 1px solid var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-number {
+    position: absolute;
+    top: calc(var(--unit) * 2);
+    right: calc(var(--unit) * 2);
+    font-size: calc(var(--unit) * 10);
+    opacity: 0.1;
+    font-weight: bold;
+    pointer-events: none;
+    transform: translateY(50px);
+    transition: transform 0.8s, opacity 0.8s;
+}
+
+.section-number.visible {
+    transform: translateY(0);
+    opacity: 0.1;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-text);
+    padding-bottom: 2px;
+    transition: border-color 0.3s;
+}
+
+a:hover {
+    border-color: var(--color-accent);
+}
+
+.parallax {
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hover-shift {
+    transition: transform 0.3s;
+}
+
+.hover-shift:hover {
+    transform: translateX(5px);
+}

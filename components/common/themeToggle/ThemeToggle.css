@@ -1,0 +1,15 @@
+.theme-toggle {
+    position: fixed;
+    bottom: calc(var(--unit) * 2);
+    right: calc(var(--unit) * 2);
+    width: calc(var(--unit) * 4);
+    height: calc(var(--unit) * 4);
+    background-color: var(--color-text);
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(90deg);
+}

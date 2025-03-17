@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+    .section {
+        padding: calc(var(--unit) * 2);
+    }
+    
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-title {
+        font-size: calc(var(--unit) * 6);
+        letter-spacing: -4px;
+    }
+    
+    .section-title {
+        font-size: calc(var(--unit) * 3);
+    }
+    
+    .work-category-title {
+        font-size: calc(var(--unit) * 2.5);
+        padding-left: calc(var(--unit) * 1.5);
+    }
+    
+    .work-category {
+        margin-bottom: calc(var(--unit) * 6);
+    }
+    
+    #works {
+        overflow-x: hidden;
+    }
+}

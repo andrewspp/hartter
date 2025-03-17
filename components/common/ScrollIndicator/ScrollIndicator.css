@@ -1,0 +1,17 @@
+.scroll-indicator {
+    position: fixed;
+    bottom: calc(var(--unit) * 2);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(var(--unit) * 20);
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.scroll-progress {
+    height: 100%;
+    width: 0;
+    background-color: var(--color-accent);
+    transition: width 0.1s;
+}

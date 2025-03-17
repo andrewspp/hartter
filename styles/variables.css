@@ -1,0 +1,15 @@
+:root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-accent: #ff6b6b;
+    --color-secondary: #a8d8ea;
+    --color-tertiary: #e8c8a9;
+    --unit: 10px;
+    --font-size-base: 16px;
+    --transition-speed: 0.5s;
+}
+
+@font-face {
+    font-family: 'SpaceMono';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/Space-Mono/1.0.0/SpaceMono-Regular.ttf') format('truetype');
+}

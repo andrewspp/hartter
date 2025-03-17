@@ -1,0 +1,67 @@
+.artists-list {
+    margin-top: calc(var(--unit) * 5);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--unit) * 3);
+    max-width: 800px;
+}
+
+.artist {
+    border-left: 2px solid var(--color-text);
+    padding-left: calc(var(--unit) * 2);
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.artist.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.artist-name {
+    font-size: calc(var(--unit) * 2);
+    margin-bottom: calc(var(--unit));
+}
+
+.artist-period {
+    font-size: calc(var(--unit) * 1.2);
+    color: var(--color-accent);
+    margin-bottom: calc(var(--unit));
+}
+
+.artist-role {
+    font-size: calc(var(--unit) * 1.4);
+}
+
+.collaborators-title {
+    margin-top: calc(var(--unit) * 8);
+    margin-bottom: calc(var(--unit) * 3);
+    font-size: calc(var(--unit) * 2);
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.collaborators-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.collaborators-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: calc(var(--unit) * -1);
+    width: calc(var(--unit) * 15);
+    height: 2px;
+    background-color: var(--color-text);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.collaborators-title.visible::after {
+    transform: scaleX(1);
+}

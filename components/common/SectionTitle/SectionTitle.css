@@ -1,0 +1,31 @@
+.section-title {
+    font-size: calc(var(--unit) * 5);
+    margin-bottom: calc(var(--unit) * 5);
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    right: calc(var(--unit) * -3);
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--color-accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s 0.3s;
+}
+
+.section-title.visible::after {
+    transform: scaleY(1);
+}

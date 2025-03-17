@@ -1,0 +1,18 @@
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-title {
+    font-size: calc(var(--unit) * 12);
+    line-height: 0.9;
+    letter-spacing: -8px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}

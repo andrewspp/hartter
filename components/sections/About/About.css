@@ -1,0 +1,19 @@
+.about-content {
+    font-family: monospace;
+    white-space: pre-line;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: calc(var(--unit) * 1.6);
+    line-height: 1.5;
+    padding: calc(var(--unit) * 5);
+    border-left: 2px solid var(--color-text);
+    position: relative;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.about-content.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
